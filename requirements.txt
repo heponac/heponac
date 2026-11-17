@@ -1,1 +1,3 @@
 openjarvis==1.0.4
+# OpenJarvis 1.0.4 envoie "temperature", que les SDK anthropic >= 1.0 n'acceptent plus
+anthropic==0.125.0
