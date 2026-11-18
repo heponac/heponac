@@ -17,3 +17,14 @@ Configuration (`config/config.toml`) :
 Ne mettez jamais la clé API dans un fichier du dépôt.
 
 Python 3.10 à 3.13 requis.
+
+## Agenda (calendrier du Mac)
+
+1. Réglages Système → Confidentialité et sécurité → Accès complet au disque → activer **Terminal**, puis relancer le Terminal.
+2. Lancer Jarvis avec les outils calendrier :
+
+```bash
+jarvis chat --agent react --tools calendar_upcoming,calendar_search
+```
+
+Jarvis lit le calendrier de l'app Calendrier du Mac (y compris les comptes Google/iCloud qui y sont ajoutés), en lecture seule.
