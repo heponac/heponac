@@ -59,11 +59,11 @@ max_tokens = 1024
 # model = ""                   # empty = use [intelligence].default_model
 
 [agent]
-default_agent = "simple"
+default_agent = "react"
 max_turns = 10
-# tools = ""                   # Comma-separated tool names
+tools = "web_search,calendar_upcoming,calendar_search"
 # objective = ""               # Concise purpose string
-# system_prompt = ""           # Inline system prompt
+system_prompt = "Tu es Jarvis, un assistant personnel. Réponds en français, brièvement et clairement (tes réponses peuvent être lues à voix haute). Tu as des outils : web_search pour la météo, l'actualité et toute information récente ; calendar_upcoming et calendar_search pour l'agenda de l'utilisateur. Utilise-les au lieu de dire que tu n'as pas accès à ces informations."
 # system_prompt_path = ""      # Path to system prompt file
 context_from_memory = true
 

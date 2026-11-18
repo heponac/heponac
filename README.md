@@ -37,3 +37,11 @@ jarvis chat --voice               # parlez, Jarvis répond à voix haute
 ```
 
 Au premier lancement, les modèles vocaux sont téléchargés (quelques centaines de Mo). Le Mac demandera l'accès au micro pour le Terminal : acceptez.
+
+## Outils activés par défaut
+
+`config/config.toml` lance l'agent `react` avec les outils `web_search` (météo, actualités…), `calendar_upcoming` et `calendar_search`, et une consigne en français. Après un `git pull`, appliquez la config avec :
+
+```bash
+cp config/config.toml ~/.openjarvis/config.toml
+```
