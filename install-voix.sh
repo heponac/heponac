@@ -16,7 +16,8 @@ else
   echo "Homebrew absent : installez espeak-ng manuellement."
 fi
 
-.venv/bin/pip install "kokoro>=0.9.4" sounddevice soundfile faster-whisper
+# av < 19 : PyAV 19 a supprimé l'option metadata_errors utilisée par faster-whisper 1.2.1
+.venv/bin/pip install "kokoro>=0.9.4" sounddevice soundfile faster-whisper "av<19"
 
 CFG=~/.openjarvis/config.toml
 if grep -q '^\[speech\]' "$CFG" 2>/dev/null; then
