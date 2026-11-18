@@ -49,6 +49,6 @@ cp config/config.toml ~/.openjarvis/config.toml
 ## Lancement rapide
 
 ```bash
-read -s -p 'Clé Anthropic : ' K && echo "$K" > ~/.openjarvis/anthropic_key && chmod 600 ~/.openjarvis/anthropic_key   # une seule fois
+read -s "K?Clé Anthropic : " && echo "$K" > ~/.openjarvis/anthropic_key && chmod 600 ~/.openjarvis/anthropic_key   # une seule fois
 ./jarvis.sh        # mode voix, sans les avertissements techniques
 ```

@@ -7,7 +7,7 @@ if [ -z "${ANTHROPIC_API_KEY:-}" ] && [ -f ~/.openjarvis/anthropic_key ]; then
 fi
 if [ -z "${ANTHROPIC_API_KEY:-}" ]; then
   echo "Clé absente. Enregistrez-la une fois avec :"
-  echo "  read -s -p 'Clé Anthropic : ' K && echo \"\$K\" > ~/.openjarvis/anthropic_key && chmod 600 ~/.openjarvis/anthropic_key"
+  echo "  read -s \"K?Clé Anthropic : \" && echo \"\$K\" > ~/.openjarvis/anthropic_key && chmod 600 ~/.openjarvis/anthropic_key"
   exit 1
 fi
 export PYTHONWARNINGS=ignore HF_HUB_VERBOSITY=error TRANSFORMERS_VERBOSITY=error HF_HUB_DISABLE_PROGRESS_BARS=1
