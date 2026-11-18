@@ -40,7 +40,7 @@ host = "http://localhost:8080"
 # host = "http://localhost:8079"
 
 [intelligence]
-default_model = "claude-sonnet-5-5"
+default_model = "claude-sonnet-4-6"
 fallback_model = ""
 # model_path = ""              # Local weights (HF repo, GGUF file, etc.)
 # checkpoint_path = ""         # Checkpoint/adapter path

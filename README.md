@@ -11,7 +11,7 @@ jarvis chat                           # conversation
 ```
 
 Configuration (`config/config.toml`) :
-- moteur `cloud`, modèle `claude-sonnet-5-5` (changer `default_model` ou utiliser `jarvis ask -m claude-haiku-4-5 ...`) ;
+- moteur `cloud`, modèle `claude-sonnet-4-6` (OpenJarvis 1.0.4 envoie `temperature`, refusé par les modèles Claude 5 ; autre choix : `claude-haiku-4-5`) ;
 - télémétrie désactivée.
 
 Ne mettez jamais la clé API dans un fichier du dépôt.
