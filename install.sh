@@ -1,9 +1,23 @@
 #!/usr/bin/env bash
 # Installe OpenJarvis dans un environnement virtuel local (.venv), configuré pour Claude (Anthropic).
-# Prérequis : Python 3.10 à 3.13
+# Prérequis : Python 3.10 à 3.13 (sur Mac : brew install python@3.12)
 set -euo pipefail
 cd "$(dirname "$0")"
-python3 -m venv .venv
+
+PY=""
+for c in python3.13 python3.12 python3.11 python3.10 python3; do
+  if command -v "$c" >/dev/null 2>&1 && "$c" -c 'import sys; sys.exit(0 if (3,10) <= sys.version_info[:2] <= (3,13) else 1)'; then
+    PY="$c"; break
+  fi
+done
+if [ -z "$PY" ]; then
+  echo "ERREUR : il faut Python 3.10 à 3.13 (trouvé : $(python3 --version 2>&1))."
+  echo "Sur Mac, installez-le avec : brew install python@3.12   puis relancez ./install.sh"
+  exit 1
+fi
+echo "Python utilisé : $($PY --version)"
+
+"$PY" -m venv --clear .venv
 .venv/bin/pip install --upgrade pip
 .venv/bin/pip install -r requirements.txt
 mkdir -p ~/.openjarvis
