@@ -5,7 +5,7 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 PY=""
-for c in python3.13 python3.12 python3.11 python3.10 python3; do
+for c in python3.12 python3.11 python3.10 python3.13 python3; do  # 3.12 en premier : la voix (kokoro) ne marche pas en 3.13
   if command -v "$c" >/dev/null 2>&1 && "$c" -c 'import sys; sys.exit(0 if (3,10) <= sys.version_info[:2] <= (3,13) else 1)'; then
     PY="$c"; break
   fi

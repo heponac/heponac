@@ -214,3 +214,13 @@ ssrf_protection = true
 # auth_dir = ""               # Defaults to ~/.openjarvis/whatsapp_auth
 # assistant_name = "Jarvis"
 # assistant_has_own_number = false
+
+[speech]
+backend = "faster-whisper"   # reconnaissance vocale locale
+model = "small"
+language = "fr"
+device = "cpu"
+compute_type = "int8"
+tts_backend = "kokoro"       # synthèse vocale locale
+voice_id = "ff_siwis"        # voix française
+voice_speed = 1.0

@@ -28,3 +28,12 @@ jarvis chat --agent react --tools calendar_upcoming,calendar_search
 ```
 
 Jarvis lit le calendrier de l'app Calendrier du Mac (y compris les comptes Google/iCloud qui y sont ajoutés), en lecture seule.
+
+## Voix (parler à Jarvis et l'entendre répondre)
+
+```bash
+./install-voix.sh                 # micro + voix française, en local (Python 3.12 requis)
+jarvis chat --voice               # parlez, Jarvis répond à voix haute
+```
+
+Au premier lancement, les modèles vocaux sont téléchargés (quelques centaines de Mo). Le Mac demandera l'accès au micro pour le Terminal : acceptez.
