@@ -52,3 +52,13 @@ cp config/config.toml ~/.openjarvis/config.toml
 read -s "K?Clé Anthropic : " && echo "$K" > ~/.openjarvis/anthropic_key && chmod 600 ~/.openjarvis/anthropic_key   # une seule fois
 ./jarvis.sh        # mode voix, sans les avertissements techniques
 ```
+
+## Bouton Prompt-master
+
+Transforme une idée brute (« écris un mail pour relancer un client ») en prompt clair et structuré, prêt à coller dans Claude, ChatGPT, etc.
+
+- **Double-cliquez `Prompt-Master.command`** dans le Finder (ou glissez-le dans le Dock pour en faire un bouton permanent).
+- Tapez votre idée dans la fenêtre → le prompt amélioré s'affiche et est **copié dans le presse-papiers** (⌘V pour coller).
+- En ligne de commande : `.venv/bin/python prompt_master.py "mon idée"`.
+
+Utilise la même clé que Jarvis (`~/.openjarvis/anthropic_key`) et le modèle `claude-opus-5-5`. Au premier double-clic, si macOS bloque le fichier : clic droit → Ouvrir.
